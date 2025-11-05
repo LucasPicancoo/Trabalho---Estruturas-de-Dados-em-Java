@@ -52,6 +52,25 @@ public class Vetor{
    //se sim imprime.
    //Se o valor buscado for menor do que o valor do meio, ignora o resto do array com valores maiores ou vice-versa. Obs: vetor precisa estar ordenado.
    
+   public int buscaBinaria(int valor){
+      int menorIndice = 0;
+      int maiorIndice = tamanho -1;
+      
+      while(menorIndice <= maiorIndice){
+         int indiceMeio = (menorIndice + maiorIndice) / 2;
+         
+         if(valores[indiceMeio] == valor){
+            return indiceMeio;
+         }else if(valores[indiceMeio] < valor){
+            menorIndice = indiceMeio + 1;
+         }else{
+            maiorIndice = indiceMeio -1;
+         }
+      }
+      
+      return -1;
+   }
+   
    public void imprimirVetor(){
       for(int i = 0; i < tamanho; i++){
          System.out.print(valores[i] + ",");
@@ -72,7 +91,8 @@ public class Vetor{
       
       v.gerar100();
       v.imprimirVetor();
-      System.out.println("\nNumero buiscado: " + v.buscaSequencial(50));
+      System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
+      System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
    }
    
 }
