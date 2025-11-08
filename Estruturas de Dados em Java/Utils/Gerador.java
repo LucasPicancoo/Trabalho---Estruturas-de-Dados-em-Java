@@ -1,6 +1,7 @@
 package Utils;
 import java.util.Random;
 import Vetor.Vetor;
+import Arvore.Arvore;
 
 public class Gerador {
 
@@ -9,6 +10,14 @@ public class Gerador {
         for(int i = 1; i <= 100; i++){
             int numero = r.nextInt(100);
             v.inserir(numero);
+        }
+    }
+
+    public void gerar100(Arvore a){
+        Random r = new Random();
+        for(int i = 1; i <= 100; i++){
+            int numero = r.nextInt(100);
+            a.inserir(numero);
         }
     }
 

@@ -1,5 +1,6 @@
 import Vetor.Vetor;
 import Utils.Gerador;
+import Arvore.Arvore;
 
 public class Principal {
 
@@ -12,6 +13,10 @@ public class Principal {
         v.imprimirVetor();
         System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
         System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
+
+        Arvore a = new Arvore();
+
+        g.gerar100(a);
     }
 
 }
