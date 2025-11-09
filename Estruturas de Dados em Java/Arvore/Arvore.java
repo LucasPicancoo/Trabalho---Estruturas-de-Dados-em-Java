@@ -48,5 +48,26 @@ public class Arvore {
         }
     }
 
+    public void emOrdem(){
+        emOrdem(raiz);
+        System.out.println();
+    }
+
+    private void emOrdem(No no){
+        if(no != null){
+            emOrdem(no.getEsquerda());
+            System.out.print(no.getValor() + " ");
+            emOrdem(no.getDireita());
+        }
+    }
+
+    // Pré ordem: Visita o nó atual, percorre a esquerda, percorre a direita (Raiz -> esquerda -> direita)
+
+    //Em ordem: Percorre a esquerda, visita o no atual e percorre a direita (esquerda -> raiz -> direita)
+
+    //Pós ordem: Percorre a esquerda, percorre a direita e visita o no atual (esquerda -> direita -> raiz)
+
+
+
 
 }

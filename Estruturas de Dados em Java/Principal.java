@@ -16,7 +16,18 @@ public class Principal {
 
         Arvore a = new Arvore();
 
-        g.gerar100(a);
+       // g.gerar100(a);
+       
+       a.inserir(10);
+       a.inserir(40);
+       a.inserir(20);
+       a.inserir(5);
+       a.inserir(8);
+       a.inserir(15);
+       a.inserir(16);
+        
+
+        a.emOrdem();
     }
 
 }
