@@ -1,6 +1,8 @@
 package Vetor;
 
-public class Vetor{
+import Interfaces.Inserivel;
+
+public class Vetor implements Inserivel {
 
     private int[] valores;
     private int tamanho;
@@ -27,7 +29,7 @@ public class Vetor{
     }
 
 
-
+    @Override
     public void inserir(int valor){
 
         if(tamanho < valores.length){

@@ -1,6 +1,8 @@
 package Arvore;
 
-public class Arvore {
+import Interfaces.Inserivel;
+
+public class Arvore implements Inserivel {
 
     private No raiz;
 
@@ -8,6 +10,7 @@ public class Arvore {
         return raiz == null;
     }
 
+    @Override
     public void inserir(int valor){
 
         if(isVazia()){
