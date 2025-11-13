@@ -55,22 +55,24 @@ public class Vetor{
     //Se o valor buscado for menor do que o valor do meio, ignora o resto do array com valores maiores ou vice-versa. Obs: vetor precisa estar ordenado.
 
     public int buscaBinaria(int valor){
-        int menorIndice = 0;
-        int maiorIndice = tamanho -1;
+        return buscaBinaria(valor, 0, tamanho -1);
+    }
 
-        while(menorIndice <= maiorIndice){
-            int indiceMeio = (menorIndice + maiorIndice) / 2;
+    private int buscaBinaria(int valor, int inicio, int fim){
 
-            if(valores[indiceMeio] == valor){
-                return indiceMeio;
-            }else if(valores[indiceMeio] < valor){
-                menorIndice = indiceMeio + 1;
-            }else{
-                maiorIndice = indiceMeio -1;
-            }
+        if(inicio > fim){
+            return -1;
         }
 
-        return -1;
+        int meio = (inicio + fim) / 2;
+
+        if(valores[meio] == valor){
+            return meio;
+        }else if(valores[meio] > valor){
+            return buscaBinaria(valor, inicio, meio -1);
+        }else{
+            return buscaBinaria(valor, meio + 1, fim);
+        }
     }
 
     public void imprimirVetor(){
