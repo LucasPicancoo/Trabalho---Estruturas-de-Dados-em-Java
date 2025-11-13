@@ -12,7 +12,8 @@ public class Principal {
 
         g.gerar100(v);
         //OrdenacaoSimples.bubbleSort(v);
-        OrdenacaoSimples.insertionSort(v);
+        //OrdenacaoSimples.insertionSort(v);
+        OrdenacaoSimples.selectionSort(v);
         v.imprimirVetor();
         System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
         System.out.println("\nBusca binaria: " + v.buscaBinaria(50));

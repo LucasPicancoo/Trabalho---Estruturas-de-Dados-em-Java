@@ -32,4 +32,24 @@ public class OrdenacaoSimples {
             vetor.getValores()[j + 1] = atual;
         }
     }
+
+    public static void selectionSort(Vetor vetor){
+        for(int i = 0; i < vetor.getTamanho() -1; i++){
+            int menorIndice = i; //o Menor elemento é o atual
+            //Busca o menor valor no vetor
+            for(int j = i +1; j < vetor.getTamanho(); j++){
+                if(vetor.getValores()[j] < vetor.getValores()[menorIndice]){
+                    menorIndice = j;//Atualiza o indice do menor elemento
+                }
+            }
+            //chama o método para trocar o menor elemento encontrado com o da posição atual
+            troca(vetor.getValores(), i, menorIndice);
+        }
+    }
+
+    private static void troca(int[] valores, int a, int b) {
+        int temp = valores[a];
+        valores[a] = valores[b]; //inverte b com a
+        valores[b] = temp; // seta na variavel
+    }
 }
