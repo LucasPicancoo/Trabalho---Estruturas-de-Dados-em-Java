@@ -11,7 +11,8 @@ public class Principal {
         Gerador g = new Gerador();
 
         g.gerar100(v);
-        OrdenacaoSimples.bubbleSort(v);
+        //OrdenacaoSimples.bubbleSort(v);
+        OrdenacaoSimples.insertionSort(v);
         v.imprimirVetor();
         System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
         System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
