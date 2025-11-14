@@ -1,5 +1,7 @@
 package Vetor;
 
+import static Utils.Troca.troca;
+
 public class OrdenacaoSimples {
 
     public static void bubbleSort(Vetor vetor){
@@ -47,9 +49,5 @@ public class OrdenacaoSimples {
         }
     }
 
-    private static void troca(int[] valores, int a, int b) {
-        int temp = valores[a];
-        valores[a] = valores[b]; //inverte b com a
-        valores[b] = temp; // seta na variavel
-    }
+
 }
