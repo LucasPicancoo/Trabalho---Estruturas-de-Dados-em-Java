@@ -11,18 +11,18 @@ public class Principal {
         Vetor v = new Vetor(100);
         Gerador g = new Gerador();
 
-        g.gerar100(v);
+        //g.gerar100(v);
         //OrdenacaoSimples.bubbleSort(v);
         //OrdenacaoSimples.insertionSort(v);
         //OrdenacaoSimples.selectionSort(v);
-        OrdenacaoAvancada.quickSort(v);
-        v.imprimirVetor();
-        System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
-        System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
+        //OrdenacaoAvancada.quickSort(v);
+        //v.imprimirVetor();
+        //System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
+        //System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
 
         Arvore a = new Arvore();
 
-       // g.gerar100(a);
+        g.gerar100(a);
         
 
         a.emOrdem();

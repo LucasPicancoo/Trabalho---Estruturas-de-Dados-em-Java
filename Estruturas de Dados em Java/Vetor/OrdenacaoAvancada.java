@@ -4,6 +4,7 @@ import static Utils.Troca.troca;
 
 public class OrdenacaoAvancada {
 
+    // tudo a esquerda do Pivo fica apenas "Menor do que ele", nao necessariamente ordenado e tudo a direita do pivo fica "maior do que ele"
     public static void quickSort(Vetor vetor){
         quickSort(vetor.getValores(), 0, vetor.getTamanho() -1);
     }
