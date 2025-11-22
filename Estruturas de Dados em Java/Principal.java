@@ -1,6 +1,7 @@
 import Vetor.Vetor;
 import Utils.Gerador;
 import Arvore.Arvore;
+import Arvore.ArvoreAVL;
 import Vetor.OrdenacaoSimples;
 import Vetor.OrdenacaoAvancada;
 
@@ -21,10 +22,11 @@ public class Principal {
         //System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
 
         Arvore a = new Arvore();
+        ArvoreAVL avl = new ArvoreAVL();
 
-        g.gerar100(a);
+        g.gerar100(avl);
 
-        System.out.println("Valor buscado: " + a.buscar(1));
+        //System.out.println("Valor buscado: " + a.buscar(1));
         
 
         //a.emOrdem();

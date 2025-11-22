@@ -4,8 +4,6 @@ import Interfaces.Inserivel;
 
 public class Arvore implements Inserivel {
 
-    //Falta implementar o método de busca...
-
     private No raiz;
 
     private boolean isVazia(){
