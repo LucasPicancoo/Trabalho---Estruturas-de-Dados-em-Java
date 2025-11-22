@@ -57,7 +57,13 @@ public class Vetor implements Inserivel {
     //Se o valor buscado for menor do que o valor do meio, ignora o resto do array com valores maiores ou vice-versa. Obs: vetor precisa estar ordenado.
 
     public int buscaBinaria(int valor){
-        return buscaBinaria(valor, 0, tamanho -1);
+
+        if(!isOrdenado()){
+            System.out.println("O vetor deve estar previamente ordenado para realizar a busca binaria");
+            return -1;
+        }else{
+            return buscaBinaria(valor, 0, tamanho -1);
+        }
     }
 
     private int buscaBinaria(int valor, int inicio, int fim){
@@ -75,6 +81,17 @@ public class Vetor implements Inserivel {
         }else{
             return buscaBinaria(valor, meio + 1, fim);
         }
+    }
+
+    //Verificação, pois a busca binaria deve funcionar apenas para vetores previamente ordenados.
+    private boolean isOrdenado(){
+        for(int i = 0; i < tamanho -1; i++){
+            //se algum elem,ento for maior que o proximo...
+            if(valores[i] > valores[i + 1]){
+                return false;
+            }
+        }
+        return true;
     }
 
     public void imprimirVetor(){
