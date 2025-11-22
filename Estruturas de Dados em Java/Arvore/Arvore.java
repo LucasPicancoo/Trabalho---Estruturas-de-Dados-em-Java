@@ -73,6 +73,29 @@ public class Arvore implements Inserivel {
     //Pós ordem: Percorre a esquerda, percorre a direita e visita o no atual (esquerda -> direita -> raiz)
 
 
+    public No buscar(int valor){
+        return buscar(valor, raiz);
+    }
+
+    private No buscar(int valor, No no){
+
+        if(no == null){
+            return null;
+        }
+
+        if(valor == no.getValor()){
+            return no;
+        }
+
+        // se o valor for menor, busca na esquerda
+        if(valor < no.getValor()){
+            return buscar(valor, no.getEsquerda());
+            // se for maior busca na direita
+        }else{
+            return buscar(valor, no.getDireita());
+        }
+    }
+
 
 
 }

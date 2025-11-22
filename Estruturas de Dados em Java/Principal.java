@@ -20,12 +20,11 @@ public class Principal {
         //System.out.println("\nNumero buscado: " + v.buscaSequencial(50));
         //System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
 
-        g.gerar100(v);
-        System.out.println("\nBusca binaria: " + v.buscaBinaria(50));
+        Arvore a = new Arvore();
 
-        //Arvore a = new Arvore();
+        g.gerar100(a);
 
-        //g.gerar100(a);
+        System.out.println("Valor buscado: " + a.buscar(1));
         
 
         //a.emOrdem();
