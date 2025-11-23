@@ -1,8 +1,6 @@
 package Vetor;
 
-import Interfaces.Inserivel;
-
-public class Vetor implements Inserivel {
+public class Vetor {
 
     private int[] valores;
     private int tamanho;
@@ -29,7 +27,13 @@ public class Vetor implements Inserivel {
     }
 
 
-    @Override
+    public void inserir(int[] valores) {
+        for (int v : valores) {
+            inserir(v);
+        }
+    }
+
+
     public void inserir(int valor){
 
         if(tamanho < valores.length){
@@ -40,6 +44,7 @@ public class Vetor implements Inserivel {
             System.out.println("Erro");
         }
     }
+
 
     //Percorrer até encontrar o valor...
     public int buscaSequencial(int valor){

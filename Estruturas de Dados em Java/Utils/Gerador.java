@@ -5,27 +5,43 @@ import Interfaces.Inserivel;
 
 public class Gerador {
 
-    public void gerarCrescente(Inserivel estrutura, int quantidade){
-        for(int i = 1; i <= quantidade; i++){
-            estrutura.inserir(i);
+    public int[] gerarCrescente(int quantidade){
+        int[] numeros = new int[quantidade];
+        for(int i = 0; i < quantidade; i++){
+            numeros[i] = i + 1;
         }
+
+        return numeros;
     }
 
 
-    public void gerarAleatorio(Inserivel estrutura, int quantidade){
+    public int[] gerarAleatorio(int quantidade){
         Random r = new Random();
-        for(int i = 1; i <= quantidade; i++){
-            int numero = r.nextInt(quantidade);
-            estrutura.inserir(numero);
+        int[] numeros = new int[quantidade];
+        for(int i = 0; i < quantidade; i++){
+            numeros[i] = r.nextInt(quantidade);
         }
+
+        return numeros;
     }
 
 
-    public void gerarDecrescente(Inserivel estrutura, int quantidade){
-        for(int i = quantidade; i >= 1; i--){
-            estrutura.inserir(i);
+    public int[] gerarDecrescente(int quantidade){
+        int[] numeros = new int[quantidade];
+        for(int i = 0; i < quantidade; i++){
+            numeros[i] = quantidade - i;
         }
+        return numeros;
     }
+
+
+
+
+//    public void gerarDecrescente(Inserivel estrutura, int quantidade){
+//        for(int i = quantidade; i >= 1; i--){
+//            estrutura.inserir(i);
+//        }
+//    }
 
 
 }

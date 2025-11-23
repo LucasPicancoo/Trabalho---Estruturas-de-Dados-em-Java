@@ -1,9 +1,8 @@
 package Arvore;
 
-import Interfaces.Inserivel;
 import Utils.BuscarValorArvore;
 
-public class ArvoreAVL implements Inserivel {
+public class ArvoreAVL {
 
     private No raiz;
     private RotacoesAVL rotacoes = new RotacoesAVL();
@@ -12,8 +11,13 @@ public class ArvoreAVL implements Inserivel {
         return raiz;
     }
 
-    @Override
-    public void inserir(int valor) {
+    public void inserir(int[] valores) {
+        for (int v : valores) {
+            inserir(v);
+        }
+    }
+
+    private void inserir(int valor) {
         raiz = inserirAVL(raiz, valor);
     }
 

@@ -26,14 +26,22 @@ public class Principal {
         ArvoreAVL avl = new ArvoreAVL();
         Timer t = new Timer();
 
-        g.gerarAleatorio(avl, 100);
-        g.gerarAleatorio(a, 1000);
+        //g.gerarAleatorio(avl, 100);
+        //g.gerarAleatorio(a, 1000);
+
+        int[] nums = g.gerarAleatorio(100);
 
         t.start();
-        System.out.println("AVL: " + avl.buscar(15));
+        avl.inserir(nums);
         t.stop();
 
+        v.inserir(nums);
+
+        a.inserir(nums);
+
         t.exibirTempo();
+        System.out.println("AVL: " + avl.buscar(15));
+
         System.out.println("binaria: " + a.buscar(1));
 
         //System.out.println("Valor buscado: " + a.buscar(1));

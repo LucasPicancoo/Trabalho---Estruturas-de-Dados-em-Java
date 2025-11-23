@@ -1,9 +1,8 @@
 package Arvore;
 
-import Interfaces.Inserivel;
 import Utils.BuscarValorArvore;
 
-public class Arvore implements Inserivel {
+public class Arvore {
 
     private No raiz;
 
@@ -11,7 +10,14 @@ public class Arvore implements Inserivel {
         return raiz == null;
     }
 
-    @Override
+
+    public void inserir(int[] valores) {
+        for (int v : valores) {
+            inserir(v);
+        }
+    }
+
+
     public void inserir(int valor){
 
         if(isVazia()){
@@ -21,6 +27,7 @@ public class Arvore implements Inserivel {
             inserir(valor, raiz);
         }
     }
+
 
     private void inserir(int valor, No raiz){
 
