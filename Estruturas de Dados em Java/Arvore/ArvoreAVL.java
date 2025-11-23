@@ -1,6 +1,7 @@
 package Arvore;
 
 import Interfaces.Inserivel;
+import Utils.BuscarValorArvore;
 
 public class ArvoreAVL implements Inserivel {
 
@@ -49,6 +50,10 @@ public class ArvoreAVL implements Inserivel {
         }
         // depois de inserir faz o balanceamento do nó atual
         return rotacoes.balancear(atual);
+    }
+
+    public No buscar(int valor){
+        return BuscarValorArvore.buscar(valor, raiz);
     }
 
 }

@@ -25,6 +25,10 @@ public class Principal {
         ArvoreAVL avl = new ArvoreAVL();
 
         g.gerar100(avl);
+        g.gerar100(a);
+
+        System.out.println("AVL: " + avl.buscar(15));
+        System.out.println("binaria: " + a.buscar(1));
 
         //System.out.println("Valor buscado: " + a.buscar(1));
         

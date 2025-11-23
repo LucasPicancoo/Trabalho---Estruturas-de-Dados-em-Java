@@ -1,6 +1,7 @@
 package Arvore;
 
 import Interfaces.Inserivel;
+import Utils.BuscarValorArvore;
 
 public class Arvore implements Inserivel {
 
@@ -34,7 +35,6 @@ public class Arvore implements Inserivel {
                 No novo = new No(valor);
                 //E adiciona
                 raiz.setEsquerda(novo);
-                System.out.println("Folha: " + novo.getValor() + "A esquerda de: " + raiz.getValor());
             }else{
                 // se ja existe, continua buscando a posição para inserir o valor
                 inserir(valor, raiz.getEsquerda());
@@ -44,7 +44,6 @@ public class Arvore implements Inserivel {
             if(raiz.getDireita() == null){
                 No novo = new No(valor);
                 raiz.setDireita(novo);
-                System.out.println("Folha: " + novo.getValor() + "A direita de: " + raiz.getValor());
             }else{
                 inserir(valor, raiz.getDireita());
             }
@@ -72,27 +71,9 @@ public class Arvore implements Inserivel {
 
 
     public No buscar(int valor){
-        return buscar(valor, raiz);
+        return BuscarValorArvore.buscar(valor, raiz);
     }
 
-    private No buscar(int valor, No no){
-
-        if(no == null){
-            return null;
-        }
-
-        if(valor == no.getValor()){
-            return no;
-        }
-
-        // se o valor for menor, busca na esquerda
-        if(valor < no.getValor()){
-            return buscar(valor, no.getEsquerda());
-            // se for maior busca na direita
-        }else{
-            return buscar(valor, no.getDireita());
-        }
-    }
 
 
 
