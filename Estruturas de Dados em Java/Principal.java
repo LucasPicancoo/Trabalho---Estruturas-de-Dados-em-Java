@@ -1,3 +1,4 @@
+import Utils.Timer;
 import Vetor.Vetor;
 import Utils.Gerador;
 import Arvore.Arvore;
@@ -23,11 +24,16 @@ public class Principal {
 
         Arvore a = new Arvore();
         ArvoreAVL avl = new ArvoreAVL();
+        Timer t = new Timer();
 
         g.gerarAleatorio(avl, 100);
         g.gerarAleatorio(a, 1000);
 
+        t.start();
         System.out.println("AVL: " + avl.buscar(15));
+        t.stop();
+
+        t.exibirTempo();
         System.out.println("binaria: " + a.buscar(1));
 
         //System.out.println("Valor buscado: " + a.buscar(1));
