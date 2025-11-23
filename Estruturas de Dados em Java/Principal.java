@@ -24,8 +24,8 @@ public class Principal {
         Arvore a = new Arvore();
         ArvoreAVL avl = new ArvoreAVL();
 
-        g.gerar100(avl);
-        g.gerar100(a);
+        g.gerarAleatorio(avl, 100);
+        g.gerarAleatorio(a, 1000);
 
         System.out.println("AVL: " + avl.buscar(15));
         System.out.println("binaria: " + a.buscar(1));
