@@ -1,6 +1,5 @@
 package Utils;
 import java.util.Random;
-import Interfaces.Inserivel;
 
 
 public class Gerador {
