@@ -4,7 +4,7 @@ import Utils.Gerador;
 import Utils.Timer;
 import Vetor.*;
 
-public class TesteInsercao {
+public class TesteInsercaoVetor {
 
     public static long testeInsercaoVetor(Vetor v, int[] valores){
 

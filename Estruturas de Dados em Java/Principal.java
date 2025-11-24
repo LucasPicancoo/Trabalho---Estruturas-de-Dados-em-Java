@@ -1,13 +1,8 @@
 import Tests.Vetor.TesteBuscaVetor;
-import Tests.Vetor.TesteInsercao;
-import Tests.Vetor.TesteOrdenacao;
-import Utils.Timer;
+import Tests.Vetor.TesteInsercaoVetor;
+import Tests.Vetor.TesteOrdenacaoVetor;
 import Vetor.Vetor;
 import Utils.Gerador;
-import Arvore.Arvore;
-import Arvore.ArvoreAVL;
-import Vetor.OrdenacaoSimples;
-import Vetor.OrdenacaoAvancada;
 
 public class Principal {
 
@@ -23,10 +18,10 @@ public class Principal {
 //        System.out.println("Tempo médio inserção (Decrescente): " + TesteInsercao.mediaInsercaoVetor(decrescente100) + " ns");
 //        System.out.println("Tempo médio inserção (Aleatório): " + TesteInsercao.mediaInsercaoVetor(aleatorio100) + " ns");
 
-        TesteInsercao.testarTodosOsCenarios();
+        TesteInsercaoVetor.testarTodosOsCenarios();
 
 
-        long ord = TesteOrdenacao.testeBubbleSort(v);
+        long ord = TesteOrdenacaoVetor.testeBubbleSort(v);
         System.out.println("Tempo BubbleSort: " + ord + " ns");
 
         long busca = TesteBuscaVetor.testeBuscaBinaria(v, 50);

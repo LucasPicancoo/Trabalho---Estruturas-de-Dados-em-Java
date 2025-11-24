@@ -3,7 +3,7 @@ package Tests.Vetor;
 import Utils.Timer;
 import Vetor.*;
 
-public class TesteOrdenacao {
+public class TesteOrdenacaoVetor {
 
 
     public static long testeBubbleSort(Vetor v){
