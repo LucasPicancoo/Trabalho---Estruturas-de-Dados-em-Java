@@ -19,9 +19,11 @@ public class Principal {
         int[] decrescente100 = g.gerarDecrescente(100);
         int[] aleatorio100 = g.gerarAleatorio(100);
 
-        System.out.println("Tempo médio inserção (Crescente): " + TesteInsercao.mediaInsercaoVetor(crescente100) + " ns");
-        System.out.println("Tempo médio inserção (Decrescente): " + TesteInsercao.mediaInsercaoVetor(decrescente100) + " ns");
-        System.out.println("Tempo médio inserção (Aleatório): " + TesteInsercao.mediaInsercaoVetor(aleatorio100) + " ns");
+//        System.out.println("Tempo médio inserção (Crescente): " + TesteInsercao.mediaInsercaoVetor(crescente100) + " ns");
+//        System.out.println("Tempo médio inserção (Decrescente): " + TesteInsercao.mediaInsercaoVetor(decrescente100) + " ns");
+//        System.out.println("Tempo médio inserção (Aleatório): " + TesteInsercao.mediaInsercaoVetor(aleatorio100) + " ns");
+
+        TesteInsercao.testarTodosOsCenarios();
 
 
         long ord = TesteOrdenacao.testeBubbleSort(v);
