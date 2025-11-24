@@ -1,7 +1,6 @@
-import Tests.Arvore.TesteInsercaoABB;
-import Tests.Vetor.TesteBuscaVetor;
+import Tests.ArvoreABB.TesteInsercaoABB;
+import Tests.ArvoreAVL.TesteInsercaoAVL;
 import Tests.Vetor.TesteInsercaoVetor;
-import Tests.Vetor.TesteOrdenacaoVetor;
 import Vetor.Vetor;
 import Utils.Gerador;
 
@@ -21,6 +20,7 @@ public class Principal {
 
         TesteInsercaoVetor.testarTodosOsCenarios();
         TesteInsercaoABB.testarTodosOsCenarios();
+        TesteInsercaoAVL.testarTodosOsCenarios();
 
 
 //        long ord = TesteOrdenacaoVetor.testeBubbleSort(v);

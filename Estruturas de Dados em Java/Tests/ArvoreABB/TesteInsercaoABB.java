@@ -1,4 +1,4 @@
-package Tests.Arvore;
+package Tests.ArvoreABB;
 
 import Utils.Gerador;
 import Utils.Timer;
