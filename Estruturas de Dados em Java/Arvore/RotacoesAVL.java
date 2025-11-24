@@ -2,7 +2,6 @@ package Arvore;
 
 public class RotacoesAVL {
 
-    //Obs: Faltam implementar os metodos de busca e inserção...
 
     public No balancear(No no){
 

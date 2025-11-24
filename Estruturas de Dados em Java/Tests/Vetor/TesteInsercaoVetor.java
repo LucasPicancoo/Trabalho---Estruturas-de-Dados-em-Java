@@ -38,6 +38,7 @@ public class TesteInsercaoVetor {
 
         for(int n : tamanhos){
 
+            //A ordem aqui está alterando o tempo...
             int[] crescente = g.gerarCrescente(n);
             int[] decrescente = g.gerarDecrescente(n);
             int[] aleatorio = g.gerarAleatorio(n);
