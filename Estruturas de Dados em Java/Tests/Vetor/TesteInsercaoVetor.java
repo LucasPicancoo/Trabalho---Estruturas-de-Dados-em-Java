@@ -17,6 +17,7 @@ public class TesteInsercaoVetor {
         return t.getTempo();
     }
 
+
     public static long mediaInsercaoVetor(int[] valores) {
         long soma = 0;
 
@@ -41,7 +42,7 @@ public class TesteInsercaoVetor {
             int[] decrescente = g.gerarDecrescente(n);
             int[] aleatorio = g.gerarAleatorio(n);
 
-            System.out.println("\n----- Testes para " + n + " elementos -----");
+            System.out.println("\n----- Testes para " + n + " elementos - Vetor -----");
 
             System.out.println("Inserção Crescente:   " + mediaInsercaoVetor(crescente) + " ns");
             System.out.println("Inserção Decrescente: " + mediaInsercaoVetor(decrescente) + " ns");
