@@ -4,6 +4,8 @@ import Utils.Gerador;
 import Utils.Timer;
 import Vetor.*;
 
+import static Tests.warmupJVM.warmupJVM;
+
 public class TesteInsercaoVetor {
 
     public static long testeInsercaoVetor(Vetor v, int[] valores){
@@ -30,25 +32,26 @@ public class TesteInsercaoVetor {
     }
 
 
-    public static void testarTodosOsCenarios(){
+    public static void testarTodosOsCenarios(Gerador g, int n){
 
-        Gerador g = new Gerador();
+        System.out.println("\n----- Teste de inserção em vetor. Tamanho = " + n + " -----");
 
-        int[] tamanhos = {100, 1000, 10000};
+        warmupJVM();
 
-        for(int n : tamanhos){
+        int[] crescente = g.gerarCrescente(n);
+        int[] decrescente = g.gerarDecrescente(n);
+        int[] aleatorio = g.gerarAleatorio(n);
 
-            //A ordem aqui está alterando o tempo...
-            int[] crescente = g.gerarCrescente(n);
-            int[] decrescente = g.gerarDecrescente(n);
-            int[] aleatorio = g.gerarAleatorio(n);
+        int[] a = g.gerarAleatorio(n);
+        TesteInsercaoVetor.mediaInsercaoVetor(a);
 
-            System.out.println("\n----- Testes para " + n + " elementos - Vetor -----");
+        long tempoCrescente = TesteInsercaoVetor.mediaInsercaoVetor(crescente);
+        long tempoDecrescente = TesteInsercaoVetor.mediaInsercaoVetor(decrescente);
+        long tempoAleatorio = TesteInsercaoVetor.mediaInsercaoVetor(aleatorio);
 
-            System.out.println("Inserção Crescente:   " + mediaInsercaoVetor(crescente) + " ns");
-            System.out.println("Inserção Decrescente: " + mediaInsercaoVetor(decrescente) + " ns");
-            System.out.println("Inserção Aleatória:   " + mediaInsercaoVetor(aleatorio) + " ns");
-        }
+        System.out.println("Tempo médio inserção (Crescente):   " + tempoCrescente   + " ns");
+        System.out.println("Tempo médio inserção (Decrescente): " + tempoDecrescente + " ns");
+        System.out.println("Tempo médio inserção (Aleatório):   " + tempoAleatorio   + " ns");
     }
 
 }
