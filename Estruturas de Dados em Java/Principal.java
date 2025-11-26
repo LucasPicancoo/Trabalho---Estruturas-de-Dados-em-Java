@@ -6,6 +6,7 @@ import Tests.ArvoreAVL.TesteInsercaoAVL;
 import Tests.Vetor.TesteBuscaBinariaVetor;
 import Tests.Vetor.TesteBuscaSequencialVetor;
 import Tests.Vetor.TesteInsercaoVetor;
+import Tests.Vetor.TesteOrdenacaoSimplesVetor;
 import Utils.Timer;
 import Vetor.Vetor;
 import Utils.Gerador;
@@ -22,16 +23,21 @@ public class Principal {
 //            TesteInsercaoVetor.testarTodosOsCenarios(g, n);
 //            TesteInsercaoABB.testarTodosOsCenarios(g, n);
 //            TesteInsercaoAVL.testarTodosOsCenarios(g, n);
-            int[] valores = g.gerarAleatorio(n);
+//            int[] valores = g.gerarAleatorio(n);
 //            TesteBuscaAVL.testarTodosOsCenarios(g, valores);
 //            TesteBuscaABB.testarTodosOsCenarios(g, valores);
-            TesteBuscaSequencialVetor.testarTodosOsCenarios(g, valores);
+//            TesteBuscaSequencialVetor.testarTodosOsCenarios(g, valores);
 
         }
 
+//        for (int n : tamanhos) {
+//            int[] valores = g.gerarCrescente(n);
+//            TesteBuscaBinariaVetor.testarTodosOsCenarios(g, valores);
+//        }
+
         for (int n : tamanhos) {
-            int[] valores = g.gerarCrescente(n);
-            TesteBuscaBinariaVetor.testarTodosOsCenarios(g, valores);
+            int[] valores = g.gerarAleatorio(n);
+            TesteOrdenacaoSimplesVetor.testarTodosOsCenarios(g, valores);
         }
 
         // Dúvida: Classe Utilitária de busca na Arvore (Estou utilizando para ABB e AVL a mesma), ou refatorar package arvore inteiro usando classe abstrata?

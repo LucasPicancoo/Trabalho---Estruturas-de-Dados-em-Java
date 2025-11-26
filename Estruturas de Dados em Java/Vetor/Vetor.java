@@ -109,4 +109,11 @@ public class Vetor {
         }
     }
 
+    public Vetor copiar() {
+        Vetor novo = new Vetor(this.tamanho);
+        System.arraycopy(this.valores, 0, novo.valores, 0, this.tamanho);
+        novo.tamanho = this.tamanho;
+        return novo;
+    }
+
 }

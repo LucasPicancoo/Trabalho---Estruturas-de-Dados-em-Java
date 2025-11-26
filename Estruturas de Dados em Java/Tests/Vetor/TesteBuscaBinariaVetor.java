@@ -4,7 +4,6 @@ import Utils.Gerador;
 import Utils.Timer;
 import Vetor.Vetor;
 
-import java.util.Arrays;
 import java.util.Random;
 
 import static Tests.warmupJVM.warmupJVM;
