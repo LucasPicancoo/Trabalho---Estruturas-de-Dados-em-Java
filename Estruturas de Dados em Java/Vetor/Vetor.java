@@ -26,6 +26,10 @@ public class Vetor {
         return tamanho;
     }
 
+    public int getValorNoIndice(int i) {
+        return valores[i];
+    }
+
 
     public void inserir(int[] valores) {
         for (int v : valores) {
