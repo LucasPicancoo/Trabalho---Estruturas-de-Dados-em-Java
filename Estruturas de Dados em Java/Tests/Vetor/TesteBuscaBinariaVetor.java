@@ -45,7 +45,6 @@ public class TesteBuscaBinariaVetor {
 
         warmupJVM();
 
-        Arrays.sort(valores);
 
         Vetor v = new Vetor(valores.length);
         v.inserir(valores);
