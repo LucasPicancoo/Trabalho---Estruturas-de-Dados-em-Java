@@ -16,6 +16,8 @@ public class Principal {
 
         for (int n : tamanhos) {
             TesteInsercaoVetor.testarTodosOsCenarios(g, n);
+            TesteInsercaoABB.testarTodosOsCenarios(g, n);
+            TesteInsercaoAVL.testarTodosOsCenarios(g, n);
         }
 
         // Dúvida: Classe Utilitária de busca na Arvore (Estou utilizando para ABB e AVL a mesma), ou refatorar package arvore inteiro usando classe abstrata?

@@ -4,6 +4,8 @@ import Utils.Gerador;
 import Utils.Timer;
 import Arvore.*;
 
+import static Tests.warmupJVM.warmupJVM;
+
 public class TesteInsercaoAVL {
 
     public static long testeInsercaoAVL(ArvoreAVL a, int[] valores){
@@ -19,7 +21,7 @@ public class TesteInsercaoAVL {
     }
 
 
-    public static long mediaInsercaoAVL(int[] valores){
+    public static long mediaInsercaoAVL(int[] valores) {
         long soma = 0;
 
         for (int i = 0; i < 5; i++) {
@@ -31,23 +33,27 @@ public class TesteInsercaoAVL {
     }
 
 
-    public static void testarTodosOsCenarios(){
+    public static void testarTodosOsCenarios(Gerador g, int n){
 
-        Gerador g = new Gerador();
+        System.out.println("\n----- Teste de inserção em AVL. Tamanho = " + n + " -----");
 
-        int[] tamanhos = {100, 1000, 10000};
+        warmupJVM();
 
-        for(int n : tamanhos){
+        int[] crescente = g.gerarCrescente(n);
+        int[] decrescente = g.gerarDecrescente(n);
+        int[] aleatorio = g.gerarAleatorio(n);
 
-            int[] crescente = g.gerarCrescente(n);
-            int[] decrescente = g.gerarDecrescente(n);
-            int[] aleatorio = g.gerarAleatorio(n);
+        // Aquecer AVL antes de medir
+        int[] a = g.gerarAleatorio(n);
+        TesteInsercaoAVL.mediaInsercaoAVL(a);
 
-            System.out.println("\n----- Testes para " + n + " elementos - Árvore AVL -----");
+        long tempoCrescente   = TesteInsercaoAVL.mediaInsercaoAVL(crescente);
+        long tempoDecrescente = TesteInsercaoAVL.mediaInsercaoAVL(decrescente);
+        long tempoAleatorio   = TesteInsercaoAVL.mediaInsercaoAVL(aleatorio);
 
-            System.out.println("Inserção Crescente:   " + mediaInsercaoAVL(crescente) + " ns");
-            System.out.println("Inserção Decrescente: " + mediaInsercaoAVL(decrescente) + " ns");
-            System.out.println("Inserção Aleatória:   " + mediaInsercaoAVL(aleatorio) + " ns");
-        }
+        System.out.println("Tempo médio inserção (Crescente):   " + tempoCrescente   + " ns");
+        System.out.println("Tempo médio inserção (Decrescente): " + tempoDecrescente + " ns");
+        System.out.println("Tempo médio inserção (Aleatório):   " + tempoAleatorio   + " ns");
     }
+
 }
