@@ -22,11 +22,9 @@ public class TesteOrdenacaoAvancadaVetor {
     public static long mediaQuickSort(Vetor v) {
         long soma = 0;
 
-        // warmup para esquentar JIT
         Vetor warmup = v.copiar();
         OrdenacaoAvancada.quickSort(warmup);
 
-        // roda 5 vezes, sempre com cópia
         for (int i = 0; i < 5; i++) {
             Vetor copia = v.copiar();
             soma += testeQuickSort(copia);
@@ -44,7 +42,7 @@ public class TesteOrdenacaoAvancadaVetor {
         warmupJVM();
 
         Vetor v = new Vetor(n);
-        v.inserir(valores); // vetor original desordenado
+        v.inserir(valores);
 
         long tempo = mediaQuickSort(v);
 

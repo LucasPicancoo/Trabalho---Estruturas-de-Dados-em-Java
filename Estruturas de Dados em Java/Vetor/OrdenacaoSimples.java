@@ -18,6 +18,7 @@ public class OrdenacaoSimples {
         }
     }
 
+//    Os outros métodos de ordenação seriam um "A mais" para o meu trabalho, mas devido ao curto tempo não irei conseguir documenta-los... pelo menos me serviu de estudo.
     public static void insertionSort(Vetor vetor){
 
         // Vai começar sempre pelo segundo elemento do vetor, pois na teoria o "primeiro ja está ordenado"...

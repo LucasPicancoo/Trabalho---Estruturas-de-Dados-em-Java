@@ -51,13 +51,4 @@ public class Gerador {
     }
 
 
-
-
-//    public void gerarDecrescente(Inserivel estrutura, int quantidade){
-//        for(int i = quantidade; i >= 1; i--){
-//            estrutura.inserir(i);
-//        }
-//    }
-
-
 }
