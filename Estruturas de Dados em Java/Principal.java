@@ -30,7 +30,7 @@ public class Principal {
 
 //        ---------- // TESTES DE BUSCA // ----------
         for (int n : tamanhos) {
-            int[] valores = g.gerarAleatorio(n);
+            int[] valores = g.gerarCrescente(n);
             TesteBuscaSequencialVetor.testarTodosOsCenarios(g, valores);
         }
 
@@ -40,12 +40,12 @@ public class Principal {
         }
 
         for (int n : tamanhos) {
-            int[] valores = g.gerarAleatorio(n);
+            int[] valores = g.gerarCrescente(n);
             TesteBuscaABB.testarTodosOsCenarios(g, valores);
         }
 
         for (int n : tamanhos) {
-            int[] valores = g.gerarAleatorio(n);
+            int[] valores = g.gerarCrescente(n);
             TesteBuscaAVL.testarTodosOsCenarios(g, valores);
         }
 

@@ -54,7 +54,7 @@ public class TesteBuscaAVL {
         int ale2 = valores[r.nextInt(n)];
         int ale3 = valores[r.nextInt(n)];
 
-        int inexistente = -1;
+        int inexistente = valores[n - 1] + 1;
         if (avl.buscar(inexistente) != null) {
             inexistente = Integer.MIN_VALUE; // fallback extremo
         }
