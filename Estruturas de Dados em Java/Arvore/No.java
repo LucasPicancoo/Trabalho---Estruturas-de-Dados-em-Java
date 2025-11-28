@@ -5,6 +5,7 @@ public class No {
     private No esquerda;
     private No direita;
     private int  valor;
+    private int altura;
 
     public No(){
 
@@ -14,6 +15,7 @@ public class No {
         this.valor = numero;
         this.esquerda = null;
         this.direita = null;
+        this.altura = 0;
     }
 
     public No getEsquerda(){
@@ -38,5 +40,13 @@ public class No {
 
     public void setValor(int numero){
         this.valor = numero;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
     }
 }

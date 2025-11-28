@@ -89,6 +89,9 @@ public class ArvoreAVL {
                 no = rotacaoEsquerdaDireita(no);
             }
         }
+
+        no.setAltura(1 + Math.max(altura(no.getEsquerda()), altura(no.getDireita())));
+
         //retorno do no ja balanceado
         return no;
     }
@@ -97,8 +100,7 @@ public class ArvoreAVL {
         if(no == null){
             return -1;
         }
-        // Altura = 1 + maior altura entre esquerda e direita
-        return 1+ Math.max(altura(no.getEsquerda()), altura(no.getDireita()));
+        return no.getAltura();
     }
 
     private int calcularBalanceamento(No no){
@@ -115,6 +117,9 @@ public class ArvoreAVL {
         y.setEsquerda(x);
         x.setDireita(z);
 
+        x.setAltura(1 + Math.max(altura(x.getEsquerda()), altura(x.getDireita())));
+        y.setAltura(1 + Math.max(altura(y.getEsquerda()), altura(y.getDireita())));
+
         return y;
     }
 
@@ -124,6 +129,9 @@ public class ArvoreAVL {
 
         y.setDireita(x);
         x.setEsquerda(z);
+
+        x.setAltura(1 + Math.max(altura(x.getEsquerda()), altura(x.getDireita())));
+        y.setAltura(1 + Math.max(altura(y.getEsquerda()), altura(y.getDireita())));
 
         return y;
     }
