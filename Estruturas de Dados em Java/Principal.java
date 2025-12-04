@@ -52,9 +52,31 @@ public class Principal {
 
 //        ---------- // TESTES DE ORDENAÇÃO // ----------
         for (int n : tamanhos) {
+            int[] valores = g.gerarCrescente(n);
+            TesteOrdenacaoSimplesVetor.testarTodosOsCenarios(g, valores);
+
+        }
+
+        for (int n : tamanhos) {
+            int[] valores = g.gerarDecrescente(n);
+            TesteOrdenacaoSimplesVetor.testarTodosOsCenarios(g, valores);
+
+        }
+
+        for (int n : tamanhos) {
             int[] valores = g.gerarAleatorio(n);
             TesteOrdenacaoSimplesVetor.testarTodosOsCenarios(g, valores);
 
+        }
+
+        for (int n : tamanhos) {
+            int[] valores = g.gerarCrescente(n);
+            TesteOrdenacaoAvancadaVetor.testarTodosOsCenarios(g, valores);
+        }
+
+        for (int n : tamanhos) {
+            int[] valores = g.gerarDecrescente(n);
+            TesteOrdenacaoAvancadaVetor.testarTodosOsCenarios(g, valores);
         }
 
         for (int n : tamanhos) {
