@@ -82,13 +82,13 @@ git clone https://github.com/LucasPicancoo/Trabalho---Estruturas-de-Dados-em-Jav
 3.  Compile:
 
 ``` bash
-javac Principal.java
+Principal.java
 ```
 
 4.  Execute:
 
 ``` bash
-java Principal
+Principal.java
 ```
 
 ------------------------------------------------------------------------
